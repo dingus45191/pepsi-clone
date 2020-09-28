@@ -2,7 +2,7 @@
 <div id="app">
   <section class="sec">
     <header>
-      <a href="#"><img src="../logo.png" class="logo"></a>
+      <a href="#"><img src="../logo.png" class="logo" alt="logo"></a>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Products</a></li>
@@ -21,18 +21,18 @@
         <a href="#">View All Products</a>
       </div>
       <div class="imgBox">
-        <img src="../pepsi001.png" class="pepsi">
+        <img src="../pepsi001.png" class="pepsi" alt="pepsi">
       </div>
     </div>
     <ul class="thumb">
-      <li><img src="../pepsi001.png" @mouseover="imageSlider('../pepsi001.png');changeBackground('#0062be')"></li>
-      <li><img src="../pepsi002.png" @mouseover="imageSlider('../pepsi002.png');changeBackground('#e60c2c')"></li>
-      <li><img src="../pepsi003.png" @mouseover="imageSlider('../pepsi003.png');changeBackground('black')"></li>
+      <li><img src="../pepsi001.png" @mouseover= " imageSlider('https://raw.githubusercontent.com/dingus45191/pepsi-clone/master/pepsi001.png'); changeBackground('#0062be')" alt="pepsi"></li>
+      <li><img src="../pepsi002.png" @mouseover= " imageSlider('https://raw.githubusercontent.com/dingus45191/pepsi-clone/master/pepsi002.png'); changeBackground('#e60c2c')" alt="pepsi"></li>
+      <li><img src="../pepsi003.png" @mouseover= " imageSlider('https://raw.githubusercontent.com/dingus45191/pepsi-clone/master/pepsi003.png'); changeBackground('black')"   alt=pepsi></li>
     </ul>
     <ul class="sci">
-      <li><img src="../facebook.png"></li>
-      <li><img src="../twitter.png"></li>
-      <li><img src="../instagram.png"></li>
+      <li><img src="../facebook.png" alt="social-media icons"></li>
+      <li><img src="../twitter.png" alt="social-media icons"></li>
+      <li><img src="../instagram.png" alt="social-media icons"></li>
     </ul>
   </section>
 </div>
@@ -41,8 +41,8 @@
 <script>
 export default{
   methods:{
-    imageSlider(anything) {
-      document.querySelector('.pepsi').src = anything;
+    imageSlider(image) {
+      document.querySelector('.pepsi').src = image;
     },
 
     changeBackground(bg) {
@@ -175,7 +175,7 @@ header ul li a {
 .thumb li {
     list-style: none;
     display: inline-block;
-    margin: 0px 20px;
+    margin: 0 20px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -206,7 +206,7 @@ header ul li a {
 .sci li a {
     display: inline-block;
     filter: invert(1);
-    margin: 5px 0px;
+    margin: 5px 0;
     transform: scale(0.6);
 }
 </style>
